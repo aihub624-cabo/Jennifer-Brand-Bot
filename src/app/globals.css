@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 217 71% 41%; /* Jennifer's primary blue #2D5AA0 */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 30 87% 66%; /* Jennifer's secondary orange #F4A261 */
+  --secondary-foreground: 30 25% 15%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 217 71% 41%;
+  --chart-1: 217 71% 41%;
+  --chart-2: 30 87% 66%;
+  --chart-3: 180 27% 35%; /* Jennifer's dark color #264653 */
+  --chart-4: 217 91% 25%;
+  --chart-5: 30 100% 50%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 180 27% 15%; /* Jennifer's dark color */
+  --foreground: 210 40% 98%;
+  --card: 180 27% 18%;
+  --card-foreground: 210 40% 98%;
+  --popover: 180 27% 18%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217 71% 55%;
+  --primary-foreground: 180 27% 15%;
+  --secondary: 30 87% 55%;
+  --secondary-foreground: 180 27% 15%;
+  --muted: 180 27% 25%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 180 27% 25%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 180 27% 25%;
+  --input: 180 27% 25%;
+  --ring: 217 71% 55%;
+  --chart-1: 217 71% 55%;
+  --chart-2: 30 87% 55%;
+  --chart-3: 180 27% 45%;
+  --chart-4: 217 91% 35%;
+  --chart-5: 30 100% 60%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Chat message animations */
+.message-appear {
+  animation: message-appear 0.3s ease-out;
+}
+
+@keyframes message-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Typing indicator animation */
+.typing-indicator {
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-indicator:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  30% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Brand gradient */
+.brand-gradient {
+  background: linear-gradient(135deg, #2D5AA0 0%, #264653 100%);
+}
+
+.brand-gradient-subtle {
+  background: linear-gradient(135deg, #E9F4FF 0%, #F0F9FF 100%);
+}
