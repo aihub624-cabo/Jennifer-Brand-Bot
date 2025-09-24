@@ -10,8 +10,3 @@ export default function SettingsPage() {
     </AdminLayout>
   )
 }
-
-export const metadata = {
-  title: 'Settings - Jennifer Brand Bot Admin',
-  description: 'Organization settings and configuration',
-}

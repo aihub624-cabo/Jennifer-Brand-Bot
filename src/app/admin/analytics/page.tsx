@@ -10,8 +10,3 @@ export default function AnalyticsPage() {
     </AdminLayout>
   )
 }
-
-export const metadata = {
-  title: 'Analytics - Jennifer Brand Bot Admin',
-  description: 'Analytics dashboard with usage metrics and insights',
-}

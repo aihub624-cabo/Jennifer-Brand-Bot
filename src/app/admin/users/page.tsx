@@ -21,8 +21,3 @@ export default function UsersPage() {
     </AdminLayout>
   )
 }
-
-export const metadata = {
-  title: 'User Management - Jennifer Brand Bot Admin',
-  description: 'Manage user accounts, roles, and permissions',
-}
