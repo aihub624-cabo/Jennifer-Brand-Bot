@@ -2,6 +2,9 @@
 
 ## 📋 **Quick Start**
 
+### **Current Live Deployment**
+🌐 **Production URL**: https://jennifer-brand-arrrvbv2f-marios-projects-9fd1f137.vercel.app
+
 ### **Option 1: Automated Deployment**
 ```bash
 # Run the automated deployment script
@@ -14,7 +17,7 @@
 vercel login  # Use aihub624@gmail.com
 
 # 2. Deploy to production
-vercel --prod
+vercel --prod --yes
 
 # 3. Set environment variables (see below)
 ```
@@ -24,6 +27,13 @@ vercel --prod
 2. Click "Add New" → "Project"
 3. Import Git Repository: `Jennifer-Brand-Bot`
 4. Configure settings and deploy
+
+### **Latest Updates Deployed**
+- ✅ Simplified left sidebar navigation (Chat, History, Profile)
+- ✅ ROI-focused admin dashboard with 3 key metrics
+- ✅ Mobile responsive design with hamburger menu
+- ✅ History and Profile pages with demo content
+- ✅ Clean client-focused interface without admin complexity
 
 ---
 

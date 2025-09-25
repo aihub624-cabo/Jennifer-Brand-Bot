@@ -21,26 +21,29 @@ You are an expert full-stack developer. I will provide you with a complete appli
 src/
 ├── app/                          # App Router pages
 │   ├── layout.tsx               # Root layout with providers
-│   ├── page.tsx                 # Landing page with demo features
+│   ├── page.tsx                 # Simple redirect to chat (no landing page)
 │   ├── auth/
 │   │   ├── login/page.tsx       # Login page
 │   │   ├── register/page.tsx    # Registration page
 │   │   ├── verify-email/page.tsx # Email verification
 │   │   └── callback/route.ts    # Auth callback handler
 │   ├── chat/
-│   │   └── page.tsx             # Main chat interface (demo mode)
+│   │   └── page.tsx             # Main chat interface with sidebar navigation
+│   ├── history/
+│   │   └── page.tsx             # Conversation history page
+│   ├── profile/
+│   │   └── page.tsx             # User profile settings page
 │   └── admin/
-│       ├── page.tsx             # Admin dashboard
-│       ├── analytics/page.tsx   # Analytics page
-│       ├── users/page.tsx       # User management
-│       └── settings/page.tsx    # Settings page
+│       ├── page.tsx             # ROI-focused admin dashboard (simplified)
+│       ├── analytics/page.tsx   # Analytics page (hidden from client)
+│       ├── users/page.tsx       # User management (hidden from client)
+│       └── settings/page.tsx    # Settings page (hidden from client)
 ├── components/
 │   ├── auth/                    # Authentication components
 │   │   ├── auth-layout.tsx     # Auth page wrapper
 │   │   ├── login-form.tsx      # Login form with validation
 │   │   └── register-form.tsx   # Registration form
-│   ├── chat/                    # Chat interface components  
-│   │   ├── chat-layout.tsx     # Full chat layout (3-panel)
+│   ├── chat/                    # Chat interface components
 │   │   ├── message-list.tsx    # Message display
 │   │   ├── message-bubble.tsx  # Individual messages
 │   │   ├── message-input.tsx   # Message input with quota
@@ -54,12 +57,14 @@ src/
 │   │   ├── user-management-table.tsx # User table
 │   │   ├── organization-settings.tsx # Org settings
 │   │   └── real-time-activity.tsx # Live activity feed
-│   └── layout/
-│       └── admin-layout.tsx     # Admin page wrapper
+│   └── layout/                  # Layout components
+│       ├── sidebar.tsx         # Left navigation sidebar
+│       ├── simplified-chat-layout.tsx # Main layout wrapper
+│       └── admin-layout.tsx     # Admin page wrapper (no sidebar)
 ├── hooks/                       # Custom React hooks
 │   ├── use-auth.ts             # Authentication state
 │   ├── use-messages.ts         # Message management
-│   ├── use-conversations.ts    # Conversation management  
+│   ├── use-conversations.ts    # Conversation management
 │   └── use-users.ts           # User data management
 ├── lib/
 │   ├── auth/
@@ -158,11 +163,14 @@ export const organizationConfig = { defaultSlug, adminEmail }
 
 ### **1. Core Features (Identical)**
 - **Authentication system** with Supabase (login/register/verify email)
+- **Simplified sidebar navigation** with Chat, History, Profile sections
 - **Professional chat interface** with message bubbles, typing indicators
-- **Admin dashboard** with analytics, user management, settings
-- **Real-time messaging** capabilities with Supabase subscriptions  
+- **History page** showing demo conversation management
+- **Profile page** with user settings and preferences
+- **ROI-focused admin dashboard** with 3 key business metrics for client presentations
+- **Mobile responsive design** with hamburger menu navigation
+- **Real-time messaging** capabilities with Supabase subscriptions
 - **Export functionality** for conversations (Text, Markdown, JSON)
-- **Mobile responsive design** that works on all devices
 - **Role-based access control** (admin, team_lead, team_member, user)
 - **Usage quota tracking** with monthly limits
 - **Multi-tenant architecture** with organization isolation
@@ -341,11 +349,22 @@ npm install [dependency-list]
 You should recreate a **pixel-perfect clone** of the Jennifer Brand Bot with:
 
 1. **Identical architecture** - Same file structure, components, and functionality
-2. **Client-specific branding** - Colors, name, industry focus
-3. **Industry-relevant content** - Quick actions and terminology  
-4. **Ready for N8N integration** - Webhook endpoints configured
-5. **Professional quality** - Production-ready with proper error handling
-6. **Fully documented** - Setup and deployment instructions
+2. **Simplified navigation** - Sidebar with Chat, History, Profile sections
+3. **Client-specific branding** - Colors, name, industry focus
+4. **ROI-focused admin dashboard** - 3 key metrics for business presentations
+5. **Industry-relevant content** - Quick actions and terminology
+6. **Mobile responsive design** - Hamburger menu and responsive layouts
+7. **Ready for N8N integration** - Webhook endpoints configured
+8. **Professional quality** - Production-ready with proper error handling
+9. **Fully documented** - Setup and deployment instructions
+
+**Key Features to Replicate:**
+- **Left sidebar navigation** with expandable/collapsible design
+- **History page** with demo conversation list and industry examples
+- **Profile page** with user settings form
+- **Simplified admin layout** showing only ROI metrics to client
+- **Mobile hamburger menu** for responsive navigation
+- **Clean message interface** with proper bubble styling
 
 **The result should be indistinguishable from the original except for the client-specific customizations.**
 
